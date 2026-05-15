@@ -1,0 +1,182 @@
+/* ── Main layout ── */
+.main-content {
+  margin-left: 250px;
+  padding: 2rem;
+  min-height: 100vh;
+  background: #F8FAFC;
+  transition: margin-left 0.3s ease;
+  box-sizing: border-box;
+}
+
+.main-content.sidebar-collapsed {
+  margin-left: 68px;
+}
+
+/* ── Mobile floating menu button ── */
+.mobile-menu-btn {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 998;
+  background: #306672;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mobile-menu-btn:hover {
+  background: #255560;
+}
+
+.mobile-menu-btn .material-icons {
+  font-size: 24px;
+  color: white;
+  display: block;
+}
+
+/* ── Header card ── */
+.header {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.room-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.room-title {
+  font-size: 2.2rem;
+  color: #1E3A8A;
+  margin: 0 0 0.5rem 0;
+}
+
+.room-subtitle {
+  font-size: 1.1rem;
+  color: #64748B;
+  margin: 0 0 1.5rem 0;
+}
+
+.view-rules-btn {
+  background: #10B981;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.view-rules-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.instructions {
+  background: #E0F2FE;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #3B82F6;
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+/* ── Seats container ── */
+.seats-container {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.room-header {
+  margin-bottom: 1.5rem;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .room-grid {
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .room-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Panel on top, seats below when stacked */
+  .room-grid .booking-panel {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  /* On mobile, sidebar is an overlay so no margin needed */
+  .main-content,
+  .main-content.sidebar-collapsed {
+    margin-left: 0;
+    padding: 1.2rem;
+    padding-top: 3.5rem; /* space for mobile menu button */
+  }
+
+  /* Show the floating menu button on mobile */
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+
+  .room-title {
+    font-size: 1.6rem;
+  }
+
+  .seats-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .room-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .view-rules-btn {
+    width: 100%;
+  }
+}
+
+/* placeholder to keep rest of file valid */
+.__unused {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

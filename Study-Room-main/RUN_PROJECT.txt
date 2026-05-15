@@ -1,0 +1,32 @@
+STUDY ROOM - REACT FRONTEND + JAVA SPRING BOOT BACKEND
+
+1) Start Java backend
+   cd backend
+   mvn spring-boot:run
+
+   Backend runs at:
+   http://localhost:8080
+
+   API examples:
+   GET  http://localhost:8080/api/bookings?roomCode=SR001&date=2026-05-15
+   POST http://localhost:8080/api/bookings
+
+2) Start React frontend
+   cd my-app
+   npm install
+   npm run dev
+
+   Frontend runs at:
+   http://localhost:5173
+
+3) What Java does
+   - Saves reservations in H2 database
+   - Checks if selected seats are already booked
+   - Allows maximum 3 consecutive time slots
+   - Returns bookings to React as JSON
+
+4) H2 database console
+   http://localhost:8080/h2-console
+   JDBC URL: jdbc:h2:file:./data/studyroomdb
+   User: sa
+   Password: empty

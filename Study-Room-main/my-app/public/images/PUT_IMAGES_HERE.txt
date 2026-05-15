@@ -1,0 +1,7 @@
+Place your image files in this folder.
+
+For the seat chairs, add:
+  swivel-chair.png
+
+They will be available in the app as:
+  /images/swivel-chair.png

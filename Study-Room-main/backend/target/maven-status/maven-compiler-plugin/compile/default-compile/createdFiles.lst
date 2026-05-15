@@ -1,0 +1,6 @@
+com\studyroom\model\Booking.class
+com\studyroom\StudyRoomApplication.class
+com\studyroom\repository\BookingRepository.class
+com\studyroom\controller\BookingController.class
+com\studyroom\model\BookingRequest.class
+com\studyroom\service\BookingService.class

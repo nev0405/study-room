@@ -1,0 +1,228 @@
+.booking-panel {
+  background: linear-gradient(135deg, #7dadad, #5874ca);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  height: fit-content;
+  min-height: 600px;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-panel h4 {
+  margin-bottom: 1rem;
+  opacity: 0.95;
+  font-size: 1.1rem;
+}
+
+.booking-status {
+  display: none;
+}
+
+.oraret-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  height: 180px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 0;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+.time-slots::-webkit-scrollbar {
+  width: 6px;
+}
+
+.time-slots::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.time-slot {
+  padding: 1rem 1.3rem;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.time-slot.available {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.time-slot.available:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(5px);
+}
+
+.time-slot.selected {
+  border: 2px solid #10B981 !important;
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.25) !important;
+}
+
+.time-slot.booked {
+  background: rgba(239, 68, 68, 0.25);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.time-text {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.group-size {
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.group-size label {
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.95;
+  font-weight: 600;
+}
+
+/* ── Custom select ── */
+.custom-select {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-select-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1E3A8A;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.custom-select.open .custom-select-value {
+  border-radius: 12px 12px 0 0;
+  background: rgba(255, 255, 255, 1);
+}
+
+.custom-select-arrow {
+  font-size: 20px !important;
+  color: #1E3A8A !important;
+  margin: 0 !important;
+  transition: transform 0.25s ease;
+}
+
+.custom-select.open .custom-select-arrow {
+  transform: rotate(180deg);
+}
+
+.custom-select-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  max-height: 220px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 50;
+  scrollbar-width: thin;
+  scrollbar-color: #5874ca transparent;
+}
+
+.custom-select-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-select-list::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.custom-select-list::-webkit-scrollbar-thumb {
+  background: #5874ca;
+  border-radius: 10px;
+}
+
+.custom-select-option {
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  color: #1E3A8A;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.custom-select-option:hover {
+  background: #e8f0fe;
+}
+
+.custom-select-option.selected {
+  background: linear-gradient(135deg, #7dadad, #5874ca);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.reserve-btn {
+  width: 100%;
+  padding: 1.3rem;
+  background: #10B981;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: auto;
+}
+
+.reserve-btn:hover {
+  background: #063224;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.restart-btn {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-top: 0.75rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.restart-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.9);
+}
