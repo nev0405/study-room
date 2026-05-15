@@ -5,7 +5,7 @@ import BookingPanel from './components/BookingPanel'
 import Modal from './components/Modal'
 import './App.css'
 
-const API_URL = "http://localhost:8080/api/bookings" 
+const API_URL = "https://study-room-1-uljp.onrender.com/api/bookings"; 
 const ROOM_CODE = 'SR001'
 const TOTAL_SEATS = 15
 
